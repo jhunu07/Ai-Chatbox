@@ -1,12 +1,124 @@
-# React + Vite
+# 🤖 Smart AI Chat Assistant using React and Dolphin-Phi (Ollama)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
 
-Currently, two official plugins are available:
+This is a lightweight, local AI chatbot built using React and Dolphin-Phi (via Ollama) that runs completely offline on your computer, mimics a chat application UI, and stores chat history in the browser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔧 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Component         | Technology             |
+| ----------------- | ---------------------- |
+| Frontend UI       | React.js               |
+| Styling           | CSS (chat layout)      |
+| AI Model          | Dolphin-Phi via Ollama |
+| API Communication | Fetch + Stream         |
+| Storage           | Browser localStorage   |
+
+---
+
+## 🚀 Features
+
+### ✅ Chat-Like UI
+
+* WhatsApp-style bubbles
+* User and bot avatars
+* Auto-scroll to latest message
+
+### ✅ AI Model Integration
+
+* Powered by `dolphin-phi` using Ollama
+* Streams answers token-by-token
+* Fully offline (runs on `localhost`)
+
+### ✅ Persistent Chat
+
+* Saves all messages to `localStorage`
+* Restores chat on page refresh
+
+### ✅ Responsive & Interactive
+
+* "Enter" to send messages
+* Cancel button to stop long replies
+
+---
+
+## 🧠 About Dolphin-Phi
+
+* A fine-tuned version of Microsoft's Phi model
+* Trained for reasoning, instructions, and basic Q\&A
+* Ideal for systems with **4 GB RAM or less**
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Install Ollama
+
+[https://ollama.com/download](https://ollama.com/download)
+
+```bash
+ollama pull dolphin-phi
+ollama run dolphin-phi
+```
+
+### 2. Run React App
+
+```bash
+npm install
+npm start
+```
+
+Ensure Ollama is running on `localhost:11434`
+
+---
+
+## 📁 Project Structure
+
+```
+react-chatbot/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   └── index.js
+├── package.json
+└── README.md
+```
+
+---
+
+## 🔍 Example Use Cases
+
+* General chat: "Tell me a joke."
+* Health advice: "What causes a fever?"
+* Coding help: "Write a JS function to reverse a string."
+* Math help: "What's the square root of 144?"
+
+---
+
+## ✅ What You Learned
+
+* React component structure
+* Handling streaming API responses
+* Local model deployment with Ollama
+* Chat history management with `localStorage`
+* Building chat-style UX in React
+
+---
+
+## 📈 Future Improvements
+
+* Dark mode
+* Clear chat button
+* Upload file for Q\&A
+* Voice input/output
+* Save chat to backend (MongoDB/Firebase)
+
+---
+
+
+## 📜 License
+
+MIT License
