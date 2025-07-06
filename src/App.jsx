@@ -102,7 +102,7 @@ function App() {
         ...prev.slice(0, -1),
         {
           role: 'assistant',
-          content: '⚠️ Could not connect to Ollama. Is it running?',
+          content: ' Could not connect to Ollama.',
         },
       ]);
     }
